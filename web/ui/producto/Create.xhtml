@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
@@ -19,10 +20,11 @@
                     <h:inputText id="nombreProducto" value="#{productoController.selected.nombreProducto}" title="#{bundle.CreateProductoTitle_nombreProducto}" />
                     <h:outputLabel value="#{bundle.CreateProductoLabel_cantidad}" for="cantidad" />
                     <h:inputText id="cantidad" value="#{productoController.selected.cantidad}" title="#{bundle.CreateProductoTitle_cantidad}" />
-                    <h:outputLabel value="#{bundle.CreateProductoLabel_fechaINgreso}" for="fechaINgreso" />
-                    <h:inputText id="fechaINgreso" value="#{productoController.selected.fechaINgreso}" title="#{bundle.CreateProductoTitle_fechaINgreso}" >
-                        <f:convertDateTime pattern="MM/dd/yyyy" />
-                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateProductoLabel_fechaINgreso}" for="fechaIngreso" />
+                    <p:calendar id="fechaIngreso" value="#{productoController.selected.fechaINgreso}" 
+                                showOn="button">
+                        <f:convertDateTime pattern="dd/MM/yy"/>
+                    </p:calendar>
                     <h:outputLabel value="#{bundle.CreateProductoLabel_precio}" for="precio" />
                     <h:inputText id="precio" value="#{productoController.selected.precio}" title="#{bundle.CreateProductoTitle_precio}" />
                     <h:outputLabel value="#{bundle.CreateProductoLabel_tipoProducto}" for="tipoProducto" />

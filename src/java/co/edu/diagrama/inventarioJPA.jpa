@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings jaxb-support="false" id="_14435577691761" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" xmlns:ns4="http://nbmodeler.java.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <jpa:entity jaxb-root-element="false" compositePrimaryKeyType="NONE" static-metamodel="false" abstract="false" class="Producto" visibile="true" minimized="false" id="_14435577691894">
+        <jpa:attributes>
+            <jpa:id name="id" attribute-type="Long" visibile="true" id="_144355776919410">
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+            <jpa:basic name="nombreProducto" attribute-type="String" visibile="true" id="_14435577691915"/>
+            <jpa:basic name="cantidad" attribute-type="int" visibile="true" id="_14435577691936"/>
+            <jpa:basic name="fechaINgreso" attribute-type="java.util.Date" visibile="true" id="_14435577691937">
+                <jpa:temporal>DATE</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic name="precio" attribute-type="double" visibile="true" id="_14435577691938"/>
+            <jpa:many-to-one name="tipoProducto" target-entity="TipoProducto" primaryKey="false" connected-entity-id="_144355776920211" visibile="true" id="_14435577691939"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity jaxb-root-element="false" compositePrimaryKeyType="NONE" static-metamodel="false" abstract="false" class="TipoProducto" visibile="true" minimized="false" id="_144355776920211">
+        <jpa:attributes>
+            <jpa:id name="id" attribute-type="Long" visibile="true" id="_144355776920213">
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+            <jpa:basic name="tipoProducto" attribute-type="String" visibile="true" id="_144355776920212"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:diagram id="_14435577691772">
+        <plane elementRef="_14435577691761" id="_14435577691773_p">
+            <shape elementRef="_14435577691894" id="_14435577691894_gui">
+                <Bounds x="32.0" y="32.0" width="160.0" height="178.0"/>
+            </shape>
+            <shape elementRef="_144355776920211" id="_144355776920211_gui">
+                <Bounds x="403.0" y="32.0" width="190.0" height="86.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>
