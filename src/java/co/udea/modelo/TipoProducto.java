@@ -73,7 +73,8 @@ public class TipoProducto implements Serializable {
 
     @Override
     public String toString() {
-        return "co.udea.modelo.TipoProducto[ id=" + id + " ]";
+//        return "co.udea.modelo.TipoProducto[ id=" + id + " ]";
+        return id + "-- " + tipoProducto;
     }
 
 }
